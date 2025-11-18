@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesCatalogBR - Catálogo</title>
+
+    <!-- Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bg-gray-900">
+<div class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-gray shadow">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="material-symbols-outlined text-3xl text-blue-600 mr-2">videogame_asset</span>
+                <h1 class="text-2xl font-bold text-white">GamesCatalogBR</h1>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <span id="nomeUsuario" class="text-gray-300 font-medium"></span>
+
+                <button id="botaoSair" 
+                        class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded flex items-center">
+                    <span class="material-symbols-outlined text-sm mr-1">logout</span>
+                    Sair
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="bg-gray-700 shadow rounded-lg p-6">
+
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-white">Catálogo de Jogos</h2>
+
+                    <button id="botaoAdicionarJogo"
+                        class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded flex items-center">
+                        <span class="material-symbols-outlined text-sm mr-1">add</span>
+                        Adicionar Jogo
+                    </button>
+                </div>
+
+                <!-- Onde o catálogo será carregado -->
+                <div id="catalogoLista" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-6"></div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Modal de Pesquisa e Avaliação -->
+<div id="modalPesquisaJogo" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+    <div class="bg-gray-800 w-11/12 md:w-1/2 rounded-lg shadow-lg p-6">
+        <div class="flex justify-between items-center mb-4">
+            <h2 id="tituloModal" class="text-white text-xl font-bold">Pesquisar Jogo</h2>
+            <button id="fecharModal" class="text-white text-2xl">&times;</button>
+        </div>
+
+        <input id="campoPesquisa" type="text" placeholder="Digite o nome do jogo..."
+               class="w-full p-3 rounded bg-gray-700 text-white focus:outline-none" />
+
+        <div id="listaResultados" class="mt-4 max-h-64 overflow-y-auto space-y-2"></div>
+
+        <div id="avaliacaoJogo" class="mt-4 hidden">
+            <h3 class="text-white font-semibold mb-2" id="nomeJogoSelecionado"></h3>
+            <img id="capaJogoSelecionado" class="w-32 mb-3 rounded" src="" alt="Capa do Jogo">
+
+            <label class="text-white block mb-1">Nota</label>
+            <div id="estrelas" class="flex mb-3 space-x-1">
+                <span class="estrela text-2xl text-gray-400 cursor-pointer">&#9733;</span>
+                <span class="estrela text-2xl text-gray-400 cursor-pointer">&#9733;</span>
+                <span class="estrela text-2xl text-gray-400 cursor-pointer">&#9733;</span>
+                <span class="estrela text-2xl text-gray-400 cursor-pointer">&#9733;</span>
+                <span class="estrela text-2xl text-gray-400 cursor-pointer">&#9733;</span>
+            </div>
+
+            <label class="text-white block mb-1">Comentário</label>
+            <textarea id="comentarioJogo" rows="4"
+                      class="w-full p-2 rounded bg-gray-700 text-white mb-3"></textarea>
+
+            <button id="enviarAvaliacao"
+                    class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+                Enviar Avaliação
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="js/catalogo.js"></script>
+</body>
+</html>

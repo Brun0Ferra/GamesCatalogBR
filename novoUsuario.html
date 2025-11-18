@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Usuário - GamesCatalogBR</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.24.0/dist/sweetalert2.min.css">
+</head>
+
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center">
+<!-- logo -->
+ <div class="mb-8">
+    <img src="images/GamesCatalogBR.png" alt="Logo do GamesCatalogBR" class="w-40" />
+ </div>
+ <!-- form -->
+  <div class="bg-gray-800 p-6 rounded shadow w-80">
+      <h1 class="text-xl mb-4 text-gray-300">Novo Usuário</h1>
+      <form id="formSignup">
+      <input id="email" type="email" placeholder="Informe o seu Email" 
+      title="Digite o seu email do sistema" autofocus
+      class="hadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600"/>
+      <input id="password" type="password" placeholder="Senha do Perfil"
+      title="Informe a sua senha"
+      class="hadow appearance-none border rounded w-full py-2 px-3 mt-4 text-white leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600"/>
+      <button id="btnLogin" class="bg-blue-600 text-white px-4 py-2 mt-4 w-full">Cadastrar</button>
+    </form>
+      <a href="loginPerfil.html" class="block text-center mt-2 text-sm text-blue-400 font-medium">Efetuar o Login</a>
+  </div>
+  <script src="js/mainSignup.js" type="module"></script>
+</body>
+
+</html>

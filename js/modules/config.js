@@ -1,0 +1,3 @@
+// Configuração centralizada do Supabase
+export const SUPABASE_URL = "https://nkshqdyreithoywvowcd.supabase.co";
+export const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5rc2hxZHlyZWl0aG95d3Zvd2NkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA0Nzk2MDAsImV4cCI6MjA3NjA1NTYwMH0.s6a4g9-zNd7WYGVLG9Tw88BzgyPE_I8HGShhsd-SWhc";

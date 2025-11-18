@@ -1,0 +1,37 @@
+/* Adicionar ao CSS */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .modal {
+        width: 90%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.2rem;
+    }
+    
+    .jogo-card {
+        padding: 10px;
+    }
+}
